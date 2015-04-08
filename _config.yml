@@ -1,0 +1,66 @@
+# Site settings
+title: Lyq's blog --use code change life
+author: Lyq
+email: iamlyq4pub@gmail.com
+description: Blog for hackers.
+disqus_shortname: blogdroidseccom
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blog.droid-sec.com" # the base hostname & protocol for your site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Rakefile
+  - spec
+  - vendor
+
+# Social media
+twitter_username:
+twitter_image: http://blog.droid-sec.com/images/about/Super-Hexagon.png
+github_username: Lyq1st
+facebook_app_id: 0000000
+facebook_image: http://blog.droid-sec.com/images/about/Super-Hexagon.png
+google_analytics_id: UA-61677671-1
+
+# Plugins
+gems:
+  - jekyll-archives
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Build settings
+markdown: redcarpet
+excerpt_separator: "<!-- more -->"
+
+# Outputting
+permalink: /:year/:month/:day/:title/
+paginate_path: /posts/:num/
+paginate: 5
+
+# Markdown settings
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - fenced_code_blocks
+    - autolink
+    - strikethrough
+    - superscript
+    - footnotes
+    - smart
+
+# jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category_archives
+  permalinks:
+    category: /categories/:name/
+
+# jekyll-compress-html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
