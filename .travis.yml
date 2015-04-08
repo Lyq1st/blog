@@ -1,0 +1,27 @@
+language: ruby
+sudo: false
+cache: bundler
+rvm:
+  - 2.2
+env:
+  global:
+    - secure: "GCs3CeCtbdy4mcLw+OsI8gXhq/H4em2bs97cjuw6x+ma+Zr+X7NyBeGDjYQ0xmqjfWpw7HjgVRdLS7k/TY6HQMJUL78K4OoLShcDO3+5JveBlpioxVeU3Pwkfw1Ztmnno3NIk7qdjcWg7IK85fMvTaqM6pv6GjrvFZ+lXP/oTTE="
+before_install:
+  - gem update --system
+  - gem update --remote bundler
+before_script:
+  - export TZ="Asia/Seoul"
+  - git config --global user.name "ChaYoung You"
+  - git config --global user.email "yousbe@gmail.com"
+script:
+  - git clone -b master --depth 1 --quiet https://${TOKEN}@github.com/yous/yous.github.io.git _site
+  - bundle exec jekyll build
+  - bundle exec rake spec
+after_success:
+  - cd _site
+  - git add -A
+  - git commit -m "Updated to $TRAVIS_COMMIT at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
+  - git push https://${TOKEN}@github.com/yous/yous.github.io.git master --quiet
+branches:
+  only:
+    - source
