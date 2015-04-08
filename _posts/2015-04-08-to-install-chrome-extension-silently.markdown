@@ -152,7 +152,7 @@ PrefHashCalculator::ValidationResult PrefHashCalculator::Validate(
 
 device_id使用了开源的[rlz][],在chrome源码的第三方库中，编译依赖于base过于庞大，通过修改rlz测试程序，以Dll形式导出获取device_id的接口，编译好的dll我会提交到github上。调用`_GetMachineId(in, MAX_MACHINE_ID_LEN))`获取`Raw device ID`
 
-[rzl]: https://github.com/rogerta/rlz
+[rlz]: https://github.com/rogerta/rlz
 
 - 计算`path`
 
