@@ -1,4 +1,4 @@
-# template for from Yous
+# template fork from Yous
 
 [![Build Status](https://travis-ci.org/yous/yous.github.io.svg?branch=source)](https://travis-ci.org/yous/yous.github.io)
 
