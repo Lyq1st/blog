@@ -1,5 +1,6 @@
 # Site settings
-title: Lyq's blog --use code change life
+title: Lyq's blog
+title_content: use code change life
 author: Lyq
 email: iamlyq4pub@gmail.com
 description: Blog for hackers.
@@ -16,10 +17,10 @@ exclude:
 
 # Social media
 twitter_username:
-twitter_image: http://blog.droid-sec.com/images/about/Super-Hexagon.png
+twitter_image: 
 github_username: Lyq1st
-facebook_app_id: 0000000
-facebook_image: http://blog.droid-sec.com/images/about/Super-Hexagon.png
+facebook_app_id: 
+facebook_image: 
 google_analytics_id: UA-61677671-1
 
 # Plugins
