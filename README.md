@@ -7,3 +7,7 @@ Blog for hackers.
 ## License
 
 All articles are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+## Blog
+
+[Lyq's blog](http://blog.droid-sec.com/)
