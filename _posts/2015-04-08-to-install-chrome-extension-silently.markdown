@@ -11,7 +11,7 @@ keywords: 静默 安装 chrome extension To Install Chrome Extension Silently
 redirect_from: /p/20150408/
 ---
 
-## 技术背景
+### 技术背景
 
 chrome 用户量现在越来越多，很多产品做chrome扩展都想能够降低用户思考成本，一键安装。chrome extension store 在国内由于xx原因访问困难，即便是用户知道扩展链接，也难以自己安装。因此很多产品也在尝试静默安装扩展，看起来有点流氓
 但是技术上不能说这是坏的，看你如何利用，目的是啥。
@@ -94,7 +94,7 @@ chrome 用户量现在越来越多，很多产品做chrome扩展都想能够降�
 
 [Other Deployment Options]: https://github.com/lb-crx/doc/blob/master/source/1-guide/OtherDeploymentOptions.rst
 ---
-## chrome extension preferences 校验机制
+### chrome extension preferences 校验机制
 
 
 要分析校验机制最快的办法就是扒chrome源码部分了，这部分的是现在 `preferences`中。
@@ -146,7 +146,7 @@ PrefHashCalculator::ValidationResult PrefHashCalculator::Validate(
 大致逻辑是`hash device_id + path + value_as_string`, `path` 与扩展ID相关，`value_as_string`与配置项相关。下面模拟chrome每一个计算的步骤，能够给出一个合法的校验值，从而绕过chrome对扩展配置检查，符合校验值。
 
 ---
-## 构造配置合法校验值
+### 构造配置合法校验值
 
 - 计算`device_id`
 

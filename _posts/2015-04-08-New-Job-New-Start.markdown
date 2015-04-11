@@ -10,7 +10,7 @@ keywords: new start
 redirect_from: /p/20150408/
 ---
 
-## New Job, New Start
+### New Job, New Start
 
 离开SW LAB，做一名安静的安全研究员吧!
 
