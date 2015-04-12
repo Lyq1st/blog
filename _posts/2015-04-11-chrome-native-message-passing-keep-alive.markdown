@@ -13,7 +13,8 @@ redirect_from: /p/20150411/
 ### Native Message Passing
 `chrome` 官方文档有关于`native message`的解释[native message][],目的是取代以前使用的`native plug-in`，降低开发者在本地的权限，增加安全性。
 
-`native message`出现于`chrome29`，其大致原理是`chrome`根据注册表中注册的`native app`的配置文件，找到`native application`，建立管道，通过标准的输入输出与本地程序通信，根据目前的版本来看（小于`43`的版本），`chrome`只负责`extension`的部署，`native app`的配置则需要自己在客户端上部署。`chrome` 启动或者开新`TAB`页都会拉起`native app`（只有一个），`chrome`进程全部关闭时`native app`退出（这个跟自己的`app`实现逻辑有关）
+`native message`出现于`chrome29`，其大致原理是`chrome`根据注册表中注册的`native app`的配置文件，找到`native application`，建立管道，通过标准的输入输出与本地程序通信。
+根据目前的版本来看（小于`43`的版本），`chrome`只负责`extension`的部署，`native app`的配置则需要自己在客户端上部署。`chrome` 启动或者开新`TAB`页都会拉起`native app`（只有一个），`chrome`进程全部关闭时`native app`退出（这个跟自己的`app`实现逻辑有关）
 
 [native message]: https://developer.chrome.com/extensions/nativeMessaging
 
