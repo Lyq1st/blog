@@ -158,7 +158,7 @@ device_id使用了开源的[rlz][],在chrome源码的第三方库中，编译依
 
 `path`的构造方式为`extensions.settings.extension_ID`,`extension_ID`是extension的ID拼接字串作为`path`。
 
--获取 `value_as_string`
+- 获取 `value_as_string`
 
 `value_as_string` 为extension的配置文件，可以通过安装扩展后，从preferences中获取该扩展实际的配置，形式如上一节中的`ahfgeienlihckogmohjhadlkjgocpleb`配置。
 
