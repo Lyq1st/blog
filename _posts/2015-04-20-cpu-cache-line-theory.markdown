@@ -4,8 +4,8 @@ title: "CPU Cache Line Theory"
 date: 2015-04-20 22:16:24 +0800
 comments: true
 categories: 
-description: 
     - Tech
+description: CPU Cache Line Theroy 设计 白话
 keywords: CPU Cache Line Theroy 设计
 redirect_from: /p/20150420/
 ---
