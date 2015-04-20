@@ -39,7 +39,7 @@ struct Cache_line
 
 ####2.直接关联(direct mapped cache)
 
-简单的理解起来直接关联就像是一个map，`n Mb` 的CPU cache 对应`m Mb`大小的物理存储，总是有固定的对应关系。其表现就是需要 `l-k`这段地址上的数据，那他一定是在CPU cache的`a-b`上。这个实现简单一点可以直接把物理内存分段，平均分为`n` 个`cache line` 份，CPU在Cache中“寻址”时，直接计算地址就能找到该物理内存在Cache的位置了。其优点就是“寻址”很快，`O（1）`的速度，缺点也很明显，一段内存抢夺一个`Cache Line`，而且物理内存通常都是连续使用的，相同一段内存总是会抢来抢去，造成Cache失效，导致效率变低，实现详情见[full associative cache][]。两个极端过后自然就会出现一个折中的方案：`N路关联型cache`。
+简单的理解起来直接关联就像是一个map，`n Mb` 的CPU cache 对应`m Mb`大小的物理存储，总是有固定的对应关系。其表现就是需要 `l-k`这段地址上的数据，那他一定是在CPU cache的`a-b`上。这个实现简单一点可以直接把物理内存分段，平均分为`n` 个`cache line` 份，CPU在Cache中“寻址”时，直接计算地址就能找到该物理内存在Cache的位置了。其优点就是“寻址”很快，`O（1）`的速度，缺点也很明显，一段内存抢夺一个`Cache Line`，而且物理内存通常都是连续使用的，相同一段内存总是会抢来抢去，造成Cache失效，导致效率变低，实现详情见[direct mapped cache][]。两个极端过后自然就会出现一个折中的方案：`N路关联型cache`。
 
 ####3.N路关联(N-ways associative cache)
 
@@ -50,5 +50,5 @@ struct Cache_line
 CPU是一个很复杂的电路结构，这只是其中的冰山一角，不待一幅图，很白话的写了一下CPU Cache 的原理，这些实现Cache的逻辑同样也是可以用到其他的上层业务逻辑里面去的，理念上都是相通的。
 
 [full associative cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/fully.html
-[full associative cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/direct.html
+[direct mapped cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/direct.html
 [Set Associative Cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/set.html
