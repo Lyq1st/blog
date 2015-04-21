@@ -12,7 +12,7 @@ redirect_from: /p/20150420/
 
 ### CPU Cache的意义
 
-CPU的运算能力指数级增长，以至于无法再与内存的读写速率匹配，因为CPU直接读写内存运算时会使性能大大折扣，因此在CPU上设计一层Cache来缓存是用频率较高的数据和指令可以环节与物理内存速率不匹配导致的性能问题。
+CPU的运算能力指数级增长，以至于无法再与内存的读写速率匹配，因为CPU直接读写内存运算时会使性能大大折扣，因此在CPU上设计一层Cache来缓存使用频率较高的数据和指令可以缓解与物理内存速率不匹配导致的性能问题。
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ struct Cache_line
 
 ###总结
 
-CPU是一个很复杂的电路结构，这只是其中的冰山一角，不待一幅图，很白话的写了一下CPU Cache 的原理，这些实现Cache的逻辑同样也是可以用到其他的上层业务逻辑里面去的，理念上都是相通的。
+CPU是一个很复杂的电路结构，这只是其中的冰山一角，不画一幅图，很白话的写了一下CPU Cache 的原理，这些实现Cache的逻辑同样也是可以用到其他的上层业务逻辑里面去的，理念上都是相通的。
 
 [full associative cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/fully.html
 [direct mapped cache]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/direct.html
