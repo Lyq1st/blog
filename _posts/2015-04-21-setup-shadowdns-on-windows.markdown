@@ -19,6 +19,8 @@ redirect_from: /p/20150421/
 
 
 OS：Windows 7 x64 SP1   <br/> Python:　2.7 32bit
+
+python 以及 python/Script 都加入path环境变量。
 其他环境也可参考以下配置。
 
 ###配置m2crypto
