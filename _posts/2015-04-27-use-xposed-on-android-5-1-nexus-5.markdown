@@ -22,6 +22,8 @@ OTA需要挂代理才能升级，默认不会清除用户数据。
 先unlock设备，factory image 升级可以使用以下操作：
 > 
 ```sh
+adb reboot bootloader
+fastboot oem unlock
 fastboot flash bootloader <bootloader-filename>.img
 fastboot flash radio <radio-fileame>.img
 fastboot reboot-bootloader
