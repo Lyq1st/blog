@@ -150,7 +150,7 @@ PrefHashCalculator::ValidationResult PrefHashCalculator::Validate(
 
 - 计算`device_id`
 
-device_id使用了开源的[rlz][],在chrome源码的第三方库中，编译依赖于base过于庞大，通过修改rlz测试程序，以Dll形式导出获取device_id的接口，编译好的dll我会提交到github上。调用`_GetMachineId(in, MAX_MACHINE_ID_LEN))`获取`Raw device ID`
+device_id使用了开源的[rlz][],在chrome源码的第三方库中，编译依赖于base过于庞大，通过修改rlz测试程序，以Dll形式导出获取device_id的接口，编译好的[rlz_id.dll][]我会提交到github上。调用`_GetMachineId(in, MAX_MACHINE_ID_LEN))`获取`Raw device ID`
 
 [rlz]: https://github.com/rogerta/rlz
 
@@ -212,3 +212,11 @@ std::string message;
 - 释放`crx`扩展文件
 
 解压`*.crx`扩展文件，crx是`*zip`文件的变种，头部略有不同，处理一下使用`7z`解压到指定目录 `extension_id\\version`（扩展ID拼接上version版本号）
+
+
+###Update
+- 代码地址[chromeExtInstaller][]
+- [rlz_id.dll][]二进制地址。
+
+[chromeExtInstaller]: https://github.com/Lyq1st/chromeExtInstaller
+[rlz_id.dll]: https://github.com/Lyq1st/chromeExtInstaller/tree/master/rlz_lib
