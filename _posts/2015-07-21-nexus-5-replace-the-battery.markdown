@@ -4,7 +4,7 @@ title: "nexus 5 replace the battery"
 date: 2015-07-21 13:36:25 +0800
 comments: true
 categories: 
-    - Live
+    - Life
 description: nexus5 更换电池 D820 D821
 keywords: nexus 更换电池 D820 D821
 redirect_from: /p/20150721/
